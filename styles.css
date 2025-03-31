@@ -481,6 +481,17 @@ footer {
     justify-content: center;
     margin-bottom: var(--spacing-4);
     box-shadow: var(--shadow-lg);
+    position: relative;
+}
+
+.logo-bolt {
+    position: absolute;
+    font-size: 24px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: yellow;
+    text-shadow: 0 0 5px rgba(255,255,255,0.7);
 }
 
 .logo-circle i {
@@ -739,11 +750,16 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
-.carousel-image i {
-    font-size: 40px;
-    color: white;
+.carousel-bolt {
+    position: absolute;
+    font-size: 24px;
+    color: yellow;
+    text-shadow: 0 0 5px rgba(255,255,255,0.7);
+    top: 30%;
+    left: 55%;
 }
 
 .carousel-indicators {
@@ -851,6 +867,19 @@ footer {
 .product-icon {
     font-size: 48px;
     color: var(--primary-blue);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-icon .fa-bolt {
+    position: absolute;
+    font-size: 24px;
+    top: -5px;
+    right: -10px;
+    color: var(--primary-green);
+    text-shadow: 0 0 3px rgba(255,255,255,0.5);
 }
 
 .product-favorite {
@@ -936,11 +965,16 @@ footer {
     align-items: center;
     justify-content: center;
     margin-bottom: var(--spacing-3);
+    position: relative;
 }
 
-.product-image-large i {
-    font-size: 120px;
-    color: var(--primary-blue);
+.product-bolt {
+    position: absolute;
+    font-size: 60px;
+    color: var(--primary-green);
+    text-shadow: 0 0 10px rgba(255,255,255,0.5);
+    top: 35%;
+    left: 55%;
 }
 
 .product-thumbnails {
@@ -959,11 +993,15 @@ footer {
     cursor: pointer;
     transition: all var(--transition-fast) var(--easing-standard);
     border: 2px solid transparent;
+    position: relative;
 }
 
-.thumbnail i {
-    font-size: 24px;
-    color: var(--neutral-600);
+.thumbnail-bolt {
+    position: absolute;
+    font-size: 12px;
+    color: var(--primary-green);
+    top: 30%;
+    left: 55%;
 }
 
 .thumbnail.active {
@@ -1313,6 +1351,15 @@ footer {
     justify-content: center;
     color: var(--primary-blue);
     font-size: 32px;
+    position: relative;
+}
+
+.summary-bolt {
+    position: absolute;
+    font-size: 16px;
+    color: var(--primary-green);
+    top: 30%;
+    left: 55%;
 }
 
 .summary-info h3 {
@@ -1838,6 +1885,15 @@ footer {
     justify-content: center;
     color: var(--primary-blue);
     margin-right: var(--spacing-3);
+    position: relative;
+}
+
+.activity-bolt {
+    position: absolute;
+    font-size: 10px;
+    color: var(--primary-green);
+    top: 30%;
+    left: 55%;
 }
 
 .activity-details {
@@ -1929,11 +1985,20 @@ footer {
     align-items: center;
     justify-content: center;
     margin-right: var(--spacing-3);
+    position: relative;
 }
 
-.item-image i {
+.item-image i.fas {
     font-size: 28px;
     color: var(--primary-blue);
+}
+
+.cart-bolt {
+    position: absolute;
+    font-size: 16px;
+    color: var(--primary-green);
+    top: 30%;
+    left: 55%;
 }
 
 .item-details {
@@ -2367,4 +2432,47 @@ footer {
     font-weight: 600;
     color: var(--neutral-800);
     margin-bottom: var(--spacing-3);
+}
+
+/* 轮播图中的图标 */
+.carousel-image i.fas {
+    font-size: 40px;
+    color: white;
+}
+
+.carousel-image i.fa-motorcycle {
+    margin-right: 8px;
+}
+
+/* 产品详情大图中的图标 */
+.product-image-large i.fas {
+    font-size: 120px;
+    color: var(--primary-blue);
+}
+
+.product-image-large i.fa-motorcycle {
+    margin-right: 15px;
+}
+
+/* 缩略图中的图标 */
+.thumbnail i.fas {
+    font-size: 24px;
+    color: var(--neutral-600);
+}
+
+.thumbnail i.fa-motorcycle {
+    margin-right: 5px;
+}
+
+.thumbnail.active i.fas {
+    color: var(--primary-blue);
+}
+
+/* 当前租赁中的电动元素样式 */
+.rental-bolt {
+    position: absolute;
+    font-size: 12px;
+    color: var(--primary-green);
+    top: 30%;
+    left: 55%;
 } 
