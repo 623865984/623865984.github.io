@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>电动自行车租赁 - iOS App Prototype</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 语言切换器 -->
+    <div class="language-switcher">
+        <button class="lang-btn active" data-lang="zh">中文</button>
+        <button class="lang-btn" data-lang="en">English</button>
+        <button class="lang-btn" data-lang="km">ភាសាខ្មែរ</button>
+    </div>
+    
+    <header>
+        <h1 data-lang-key="app-title">电动自行车租赁 App Prototype</h1>
+        <p data-lang-key="app-subtitle">iOS UI/UX Design</p>
+    </header>
+    
+    <main class="prototype-grid">
+        <!-- Welcome/Login Screen -->
+        <section class="screen-container" id="welcome-screen">
+            <div class="screen-header">
+                <h2 data-lang-key="welcome-login">欢迎/登录</h2>
+            </div>
+            <div class="ios-screen">
+                <div class="status-bar">
+                    <span>9:41</span>
+                    <div>
+                        <span class="mr-2"><i class="fas fa-signal"></i></span>
+                        <span class="mr-2"><i class="fas fa-wifi"></i></span>
+                        <span><i class="fas fa-battery-full"></i></span>
+                    </div>
+                </div>
+                
+                <div class="login-container">
+                    <div class="login-logo">
+                        <div class="logo-circle">
+                            <i class="fas fa-bicycle"></i>
+                        </div>
+                        <h1 class="app-name">EBike</h1>
+                        <p class="app-slogan" data-lang-key="app-slogan">绿色出行，畅享骑行</p>
+                    </div>
+                    
+                    <div class="login-form">
+                        <div class="input-field">
+                            <label for="username" data-lang-key="phone-number">手机号码</label>
+                            <input type="text" id="username" data-lang-key="phone-placeholder" placeholder="请输入手机号码">
+                        </div>
+                        
+                        <div class="input-field">
+                            <label for="password" data-lang-key="password">密码</label>
+                            <input type="password" id="password" data-lang-key="password-placeholder" placeholder="请输入密码">
+                        </div>
+                        
+                        <div class="forgot-password">
+                            <a href="#" class="text-primary" data-lang-key="forgot-password">忘记密码？</a>
+                        </div>
+                        
+                        <button class="btn btn-primary w-full" data-lang-key="login-btn">登录</button>
+                        
+                        <div class="login-separator">
+                            <span data-lang-key="or">或</span>
+                        </div>
+                        
+                        <div class="social-login">
+                            <button class="social-btn">
+                                <i class="fab fa-weixin"></i>
+                            </button>
+                            <button class="social-btn">
+                                <i class="fab fa-qq"></i>
+                            </button>
+                            <button class="social-btn">
+                                <i class="fab fa-apple"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="register-prompt">
+                            <span data-lang-key="no-account">还没有帐号？</span>
+                            <a href="#" class="text-primary font-medium" data-lang-key="register-now">立即注册</a>
+                        </div>
+                        
+                        <button class="btn btn-outline w-full mt-6" data-lang-key="guest-browse">游客浏览</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Home/Browse Screen -->
+        <section class="screen-container" id="home-screen">
+            <div class="screen-header">
+                <h2 data-lang-key="home-browse">首页/浏览</h2>
+            </div>
+            <div class="ios-screen">
+                <div class="status-bar">
+                    <span>9:41</span>
+                    <div>
+                        <span class="mr-2"><i class="fas fa-signal"></i></span>
+                        <span class="mr-2"><i class="fas fa-wifi"></i></span>
+                        <span><i class="fas fa-battery-full"></i></span>
+                    </div>
+                </div>
+                
+                <div class="home-container">
+                    <div class="home-header">
+                        <div class="location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span data-lang-key="current-location">当前位置</span>
+                        </div>
+                        <div class="search-bar">
+                            <i class="fas fa-search"></i>
+                            <input type="text" data-lang-key="search-placeholder" placeholder="搜索电动自行车">
+                        </div>
+                    </div>
+                    
+                    <!-- 轮播图 -->
+                    <div class="carousel">
+                        <div class="carousel-item">
+                            <div class="carousel-content">
+                                <div class="carousel-text">
+                                    <h3>春季特惠</h3>
+                                    <p data-lang-key="limited-offer">限时优惠 30% 折扣</p>
+                                    <button class="btn-sm btn-light">查看详情</button>
+                                </div>
+                                <div class="carousel-image">
+                                    <i class="fas fa-bicycle"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-indicators">
+                            <div class="indicator active"></div>
+                            <div class="indicator"></div>
+                            <div class="indicator"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- 分类选项卡 -->
+                    <div class="category-tabs">
+                        <div class="tab active">全部</div>
+                        <div class="tab" data-lang-key="electric">电动</div>
+                        <div class="tab" data-lang-key="mountain">山地</div>
+                        <div class="tab" data-lang-key="city">城市</div>
+                        <div class="tab">折叠车</div>
+                        <div class="tab">公路车</div>
+                    </div>
+                    
+                    <!-- 产品网格 -->
+                    <div class="product-grid">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <div class="product-icon">
+                                    <i class="fas fa-bicycle"></i>
+                                </div>
+                                <div class="product-favorite">
+                                    <i class="far fa-heart"></i>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-title" data-lang-key="eco-rider">Eco Rider X1</div>
+                                <div class="product-description" data-lang-key="eco-rider-desc">轻便电动自行车，适合城市代步</div>
+                                <div class="product-meta">
+                                    <div class="product-price" data-lang-key="eco-rider-price">¥25/小时</div>
+                                    <div class="product-rating">
+                                        <i class="fas fa-star"></i>
+                                        4.8
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="product-card">
+                            <div class="product-image">
+                                <div class="product-icon">
+                                    <i class="fas fa-bicycle"></i>
+                                </div>
+                                <div class="product-favorite">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-title" data-lang-key="urban-glide">Urban Glide 2.0</div>
+                                <div class="product-description" data-lang-key="urban-glide-desc">城市通勤电动自行车</div>
+                                <div class="product-meta">
+                                    <div class="product-price" data-lang-key="urban-glide-price">¥30/小时</div>
+                                    <div class="product-rating">
+                                        <i class="fas fa-star"></i>
+                                        4.9
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="product-card">
+                            <div class="product-image">
+                                <div class="product-icon">
+                                    <i class="fas fa-bicycle"></i>
+                                </div>
+                                <div class="product-favorite">
+                                    <i class="far fa-heart"></i>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-title" data-lang-key="mountain-explorer">Mountain Explorer</div>
+                                <div class="product-description" data-lang-key="mountain-explorer-desc">山地越野电动自行车</div>
+                                <div class="product-meta">
+                                    <div class="product-price" data-lang-key="mountain-explorer-price">¥40/小时</div>
+                                    <div class="product-rating">
+                                        <i class="fas fa-star"></i>
+                                        4.7
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="product-card">
+                            <div class="product-image">
+                                <div class="product-icon">
+                                    <i class="fas fa-bicycle"></i>
+                                </div>
+                                <div class="product-favorite">
+                                    <i class="far fa-heart"></i>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-title" data-lang-key="compact-folder">Compact Folder</div>
+                                <div class="product-description" data-lang-key="compact-folder-desc">便携折叠电动自行车</div>
+                                <div class="product-meta">
+                                    <div class="product-price" data-lang-key="compact-folder-price">¥28/小时</div>
+                                    <div class="product-rating">
+                                        <i class="fas fa-star"></i>
+                                        4.6
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tab栏 -->
+                    <div class="tab-bar">
+                        <div class="tab-item active">
+                            <div class="tab-icon"><i class="fas fa-home"></i></div>
+                            <div class="tab-label" data-lang-key="home">首页</div>
+                        </div>
+                        <div class="tab-item">
+                            <div class="tab-icon"><i class="fas fa-compass"></i></div>
+                            <div class="tab-label" data-lang-key="discover">发现</div>
+                        </div>
+                        <div class="tab-item">
+                            <div class="tab-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="tab-label" data-lang-key="nearby">附近</div>
+                        </div>
+                        <div class="tab-item">
+                            <div class="tab-icon"><i class="fas fa-shopping-cart"></i></div>
+                            <div class="tab-label" data-lang-key="shopping-cart">购物车</div>
+                        </div>
+                        <div class="tab-item">
+                            <div class="tab-icon"><i class="fas fa-user"></i></div>
+                            <div class="tab-label" data-lang-key="my">我的</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Detail Screen -->
+        <section class="screen-container" id="product-screen">
+            <div class="screen-header">
+                <h2 data-lang-key="product-detail">产品详情</h2>
+            </div>
+            <div class="ios-screen">
+                <div class="status-bar">
+                    <span>9:41</span>
+                    <div>
+                        <span class="mr-2"><i class="fas fa-signal"></i></span>
+                        <span class="mr-2"><i class="fas fa-wifi"></i></span>
+                        <span><i class="fas fa-battery-full"></i></span>
+                    </div>
+                </div>
+                
+                <div class="product-detail-container">
+                    <!-- Navigation Bar with Back Button -->
+                    <div class="nav-bar">
+                        <button class="icon-btn">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <div class="nav-title" data-lang-key="product-detail">产品详情</div>
+                        <div class="nav-buttons">
+                            <button class="icon-btn">
+                                <i class="fas fa-share-alt"></i>
+                            </button>
+                            <button class="icon-btn">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Product Image Gallery -->
+                    <div class="product-gallery">
+                        <div class="product-image-large">
+                            <i class="fas fa-bicycle"></i>
+                        </div>
+                        <div class="product-thumbnails">
+                            <div class="thumbnail active">
+                                <i class="fas fa-bicycle"></i>
+                            </div>
+                            <div class="thumbnail">
+                                <i class="fas fa-cog"></i>
+                            </div>
+                            <div class="thumbnail">
+                                <i class="fas fa-battery-full"></i>
+                            </div>
+                            <div class="thumbnail">
+                                <i class="fas fa-tachometer-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product Info -->
+                    <div class="product-detail-info">
+                        <h2 class="product-detail-title">城市轻便电动车 X1 Pro</h2>
+                        <div class="product-detail-meta">
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span data-lang-key="review-count">4.8 (245条评价)</span>
+                            </div>
+                            <div class="sales" data-lang-key="monthly-sales">月销 1,298</div>
+                        </div>
+                        <div class="product-detail-price">
+                            <span class="current-price">¥2,499</span>
+                            <span class="original-price">¥2,999</span>
+                            <span class="discount-tag" data-lang-key="limited-offer">限时优惠</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Product Specs -->
+                    <div class="product-specs">
+                        <h3 class="section-title" data-lang-key="product-specs">产品规格</h3>
+                        <div class="specs-grid">
+                            <div class="spec-item">
+                                <div class="spec-icon">
+                                    <i class="fas fa-tachometer-alt"></i>
+                                </div>
+                                <div class="spec-info">
+                                    <div class="spec-name" data-lang-key="max-speed">最高时速</div>
+                                    <div class="spec-value">25 km/h</div>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <div class="spec-icon">
+                                    <i class="fas fa-battery-full"></i>
+                                </div>
+                                <div class="spec-info">
+                                    <div class="spec-name" data-lang-key="battery-range">续航里程</div>
+                                    <div class="spec-value">80 km</div>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <div class="spec-icon">
+                                    <i class="fas fa-weight"></i>
+                                </div>
+                                <div class="spec-info">
+                                    <div class="spec-name" data-lang-key="bike-weight">整车重量</div>
+                                    <div class="spec-value">18 kg</div>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <div class="spec-icon">
+                                    <i class="fas fa-bolt"></i>
+                                </div>
+                                <div class="spec-info">
+                                    <div class="spec-name" data-lang-key="charging-time">充电时间</div>
+                                    <div class="spec-value">4-6 小时</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Rental Options -->
+                    <div class="rental-options">
+                        <h3 class="section-title" data-lang-key="rental-options">租赁选项</h3>
+                        <div class="option-tabs">
+                            <div class="option-tab active">
+                                <span class="option-duration" data-lang-key="daily-rental">日租</span>
+                                <span class="option-price">¥99/天</span>
+                            </div>
+                            <div class="option-tab">
+                                <span class="option-duration" data-lang-key="weekly-rental">周租</span>
+                                <span class="option-price">¥549/周</span>
+                            </div>
+                            <div class="option-tab">
+                                <span class="option-duration" data-lang-key="monthly-rental">月租</span>
+                                <span class="option-price">¥1,599/月</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Reviews Section -->
+                    <div class="reviews-section">
+                        <div class="section-header">
+                            <h3 class="section-title" data-lang-key="user-reviews">用户评价</h3>
+                            <a href="#" class="section-link" data-lang-key="view-all">查看全部 <i class="fas fa-chevron-right"></i></a>
+                        </div>
+                        
+                        <div class="review-item">
+                            <div class="review-header">
+                                <div class="reviewer">
+                                    <div class="avatar">
+                                        <i class="fas fa-user"></i>
+                                    </div>
+                                    <div class="reviewer-info">
+                                        <div class="reviewer-name">张先生</div>
+                                        <div class="review-date">2023-05-18</div>
+                                    </div>
+                                </div>
+                                <div class="review-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="review-content" data-lang-key="review-content">
+                                电动车非常轻便，骑行感受很好，电池续航也不错，整体来说非常满意，客服态度也很好！
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Action Buttons -->
+                    <div class="product-actions">
+                        <button class="btn btn-outline">
+                            <i class="fas fa-comments"></i>
+                            <span data-lang-key="consult">咨询</span>
+                        </button>
+                        <button class="btn btn-primary flex-1">
+                            <span data-lang-key="rent-now">立即租赁</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rental Process Screen -->
+        <section class="screen-container" id="rental-screen">
+            <div class="screen-header">
+                <h2 data-lang-key="rental-process">租赁流程</h2>
+            </div>
+            <div class="ios-screen">
+                <div class="status-bar">
+                    <span>9:41</span>
+                    <div>
+                        <span class="mr-2"><i class="fas fa-signal"></i></span>
+                        <span class="mr-2"><i class="fas fa-wifi"></i></span>
+                        <span><i class="fas fa-battery-full"></i></span>
+                    </div>
+                </div>
+                
+                <div class="rental-process-container">
+                    <!-- Navigation Bar with Back Button -->
+                    <div class="nav-bar">
+                        <button class="icon-btn">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <div class="nav-title" data-lang-key="confirm-rental">确认租赁</div>
+                        <div class="nav-buttons">
+                            <button class="icon-btn">
+                                <i class="fas fa-question-circle"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Steps Indicator -->
+                    <div class="steps-indicator">
+                        <div class="step completed">
+                            <div class="step-number">1</div>
+                            <div class="step-label" data-lang-key="select-model">选择车型</div>
+                        </div>
+                        <div class="step-connector completed"></div>
+                        <div class="step active">
+                            <div class="step-number">2</div>
+                            <div class="step-label" data-lang-key="confirm-info">确认信息</div>
+                        </div>
+                        <div class="step-connector"></div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <div class="step-label" data-lang-key="pay-deposit">支付订金</div>
+                        </div>
+                        <div class="step-connector"></div>
+                        <div class="step">
+                            <div class="step-number">4</div>
+                            <div class="step-label" data-lang-key="complete">完成</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product Summary -->
+                    <div class="rental-product-summary">
+                        <div class="summary-image">
+                            <i class="fas fa-bicycle"></i>
+                        </div>
+                        <div class="summary-info">
+                            <h3>城市轻便电动车 X1 Pro</h3>
+                            <div class="rental-term" data-lang-key="weekly-rental-price">周租 · ¥549 / 7天</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Date Selection -->
+                    <div class="rental-section">
+                        <h3 class="section-title" data-lang-key="rental-dates">租赁日期</h3>
+                        
+                        <div class="date-range-selector">
+                            <div class="date-input">
+                                <div class="date-label" data-lang-key="start-date">开始日期</div>
+                                <div class="date-value">
+                                    <i class="far fa-calendar-alt"></i>
+                                    <span>2023-06-15</span>
+                                </div>
+                            </div>
+                            <div class="date-separator">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                            <div class="date-input">
+                                <div class="date-label" data-lang-key="end-date">结束日期</div>
+                                <div class="date-value">
+                                    <i class="far fa-calendar-alt"></i>
+                                    <span>2023-06-22</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Mini Calendar -->
+                        <div class="mini-calendar">
+                            <div class="calendar-header">
+                                <span data-lang-key="month-year">六月 2023</span>
+                                <div class="calendar-nav">
+                                    <button class="calendar-btn">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </button>
+                                    <button class="calendar-btn">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="weekdays">
+                                <div data-lang-key="sun">日</div>
+                                <div data-lang-key="mon">一</div>
+                                <div data-lang-key="tue">二</div>
+                                <div data-lang-key="wed">三</div>
+                                <div data-lang-key="thu">四</div>
+                                <div data-lang-key="fri">五</div>
+                                <div data-lang-key="sat">六</div>
+                            </div>
+                            <div class="calendar-grid">
+                                <div class="day disabled">28</div>
+                                <div class="day disabled">29</div>
+                                <div class="day disabled">30</div>
+                                <div class="day disabled">31</div>
+                                <div class="day">1</div>
+                                <div class="day">2</div>
+                                <div class="day">3</div>
+                                <div class="day">4</div>
+                                <div class="day">5</div>
+                                <div class="day">6</div>
+                                <div class="day">7</div>
+                                <div class="day">8</div>
+                                <div class="day">9</div>
+                                <div class="day">10</div>
+                                <div class="day">11</div>
+                                <div class="day">12</div>
+                                <div class="day">13</div>
+                                <div class="day">14</div>
+                                <div class="day start-date">15</div>
+                                <div class="day in-range">16</div>
+                                <div class="day in-range">17</div>
+                                <div class="day in-range">18</div>
+                                <div class="day in-range">19</div>
+                                <div class="day in-range">20</div>
+                                <div class="day in-range">21</div>
+                                <div class="day end-date">22</div>
+                                <div class="day">23</div>
+                                <div class="day">24</div>
+                                <div class="day">25</div>
+                                <div class="day">26</div>
+                                <div class="day">27</div>
+                                <div class="day">28</div>
+                                <div class="day">29</div>
+                                <div class="day">30</div>
+                                <div class="day disabled">1</div>
+                                <div class="day disabled">2</div>
+                                <div class="day disabled">3</div>
+                                <div class="day disabled">4</div>
+                                <div class="day disabled">5</div>
+                                <div class="day disabled">6</div>
+                                <div class="day disabled">7</div>
+                                <div class="day disabled">8</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Location Selection -->
+                    <div class="rental-section">
+                        <h3 class="section-title" data-lang-key="pickup-location">取还地点</h3>
+                        
+                        <div class="location-selector">
+                            <div class="location-input">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span data-lang-key="store-location">西湖区文三路万塘路交叉口门店</span>
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Order Summary -->
+                    <div class="rental-section">
+                        <h3 class="section-title" data-lang-key="cost-breakdown">费用明细</h3>
+                        
+                        <div class="order-summary">
+                            <div class="summary-row">
+                                <div class="summary-label" data-lang-key="rental-fee">租金（7天）</div>
+                                <div class="summary-value" data-lang-key="rental-fee-value">¥549.00</div>
+                            </div>
+                            <div class="summary-row">
+                                <div class="summary-label" data-lang-key="deposit-refundable">押金（可退）</div>
+                                <div class="summary-value" data-lang-key="deposit-value">¥1,000.00</div>
+                            </div>
+                            <div class="summary-row">
+                                <div class="summary-label" data-lang-key="insurance-required">保险费（必选）</div>
+                                <div class="summary-value" data-lang-key="insurance-value">¥35.00</div>
+                            </div>
+                            <div class="summary-row discount">
+                                <div class="summary-label" data-lang-key="coupon">优惠券</div>
+                                <div class="summary-value" data-lang-key="coupon-value">-¥50.00</div>
+                            </div>
+                            <div class="summary-divider"></div>
+                            <div class="summary-row total">
+                                <div class="summary-label" data-lang-key="total">总计</div>
+                                <div class="summary-value" data-lang-key="total-value">¥1,534.00</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- My Account Screen -->
+        <section class="screen-container" id="account-screen">
+            <div class="screen-header">
+                <h2 data-lang-key="my-account">我的账户</h2>
+            </div>
+            <div class="ios-screen">
+                <div class="status-bar">
+                    <span>9:41</span>
+                    <div>
+                        <span class="mr-2"><i class="fas fa-signal"></i></span>
+                        <span class="mr-2"><i class="fas fa-wifi"></i></span>
+                        <span><i class="fas fa-battery-full"></i></span>
+                    </div>
+                </div>
+                
+                <div class="account-container">
+                    <!-- Top Bar -->
+                    <div class="account-top-bar">
+                        <div class="account-title" data-lang-key="my-account">我的账户</div>
+                        <div class="account-actions">
+                            <button class="icon-btn">
+                                <i class="fas fa-bell"></i>
+                            </button>
+                            <button class="icon-btn">
+                                <i class="fas fa-cog"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- User Profile -->
+                    <div class="user-profile">
+                        <div class="user-avatar">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="user-info">
+                            <h3 class="user-name">张三</h3>
+                            <div class="user-level">
+                                <span class="level-tag" data-lang-key="regular-member">普通会员</span>
+                                <span class="level-points" data-lang-key="points">230 积分</span>
+                            </div>
+                        </div>
+                        <button class="icon-btn">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- Wallet Card -->
+                    <div class="account-card wallet-card">
+                        <div class="card-content">
+                            <div class="card-title" data-lang-key="my-wallet">我的钱包</div>
+                            <div class="wallet-balance">
+                                <div class="balance-item">
+                                    <div class="balance-value">¥168</div>
+                                    <div class="balance-label" data-lang-key="account-balance">账户余额</div>
+                                </div>
+                                <div class="balance-divider"></div>
+                                <div class="balance-item">
+                                    <div class="balance-value">2</div>
+                                    <div class="balance-label" data-lang-key="coupons">优惠券</div>
+                                </div>
+                                <div class="balance-divider"></div>
+                                <div class="balance-item">
+                                    <div class="balance-value">¥0</div>
+                                    <div class="balance-label" data-lang-key="deposit">押金</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Current Rental -->
+                    <div class="account-card rental-status-card">
+                        <div class="card-header">
+                            <div class="card-title" data-lang-key="current-rental">当前租赁</div>
+                            <a href="#" class="card-link" data-lang-key="view-details">查看详情 <i class="fas fa-chevron-right"></i></a>
+                        </div>
+                        <div class="card-content">
+                            <div class="active-rental">
+                                <div class="rental-product">
+                                    <div class="product-icon">
+                                        <i class="fas fa-bicycle"></i>
+                                    </div>
+                                    <div class="product-details">
+                                        <div class="product-name" data-lang-key="city-ebike">城市轻便电动车 X1 Pro</div>
+                                        <div class="rental-details">
+                                            <span class="rental-dates">06月15日 - 06月22日</span>
+                                            <span class="rental-dot">•</span>
+                                            <span class="rental-location">西湖区店</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rental-progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-value" style="width: 40%"></div>
+                                    </div>
+                                    <div class="progress-info">
+                                        <span data-lang-key="rental-progress">租期进度</span>
+                                        <span class="progress-percentage">40%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Service Shortcuts -->
+                    <div class="account-services">
+                        <div class="service-row">
+                            <div class="service-item">
+                                <div class="service-icon">
+                                    <i class="fas fa-history"></i>
+                                </div>
+                                <div class="service-name" data-lang-key="rental-history">租赁记录</div>
+                            </div>
+                            <div class="service-item">
+                                <div class="service-icon">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <div class="service-name" data-lang-key="favorites">收藏夹</div>
+                            </div>
+                            <div class="service-item">
+                                <div class="service-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="service-name" data-lang-key="store-map">门店地图</div>
+                            </div>
+                            <div class="service-item">
+                                <div class="service-icon">
+                                    <i class="fas fa-credit-card"></i>
+                                </div>
+                                <div class="service-name" data-lang-key="payment-methods">支付方式</div>
+                            </div>
+                        </div>
+                        <div class="service-row">
+                            <div class="service-item">
+                                <div class="service-icon">
+                                    <i class="fas fa-headset"></i>
+                                </div>
+                                <div class="service-name" data-lang-key="customer-service">客户服务</div>
+                            </div>
+                            <div class="service-item">
+                                <div class="service-icon">
+                                    <i class="fas fa-gift"></i>
+                                </div>
+                                <div class="service-name" data-lang-key="member-benefits">会员福利</div>
+                            </div>
+                            <div class="service-item">
+                                <div class="service-icon">
+                                    <i class="fas fa-question-circle"></i>
+                                </div>
+                                <div class="service-name" data-lang-key="help-center">帮助中心</div>
+                            </div>
+                            <div class="service-item">
+                                <div class="service-icon">
+                                    <i class="fas fa-share-alt"></i>
+                                </div>
+                                <div class="service-name" data-lang-key="invite-friends">分享邀请</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Recent Activity -->
+                    <div class="account-section">
+                        <div class="section-header">
+                            <h3 class="section-title" data-lang-key="recent-activity">最近活动</h3>
+                            <a href="#" class="section-link" data-lang-key="view-more">查看更多 <i class="fas fa-chevron-right"></i></a>
+                        </div>
+                        <div class="activity-list">
+                            <div class="activity-item">
+                                <div class="activity-icon">
+                                    <i class="fas fa-bicycle"></i>
+                                </div>
+                                <div class="activity-details">
+                                    <div class="activity-title" data-lang-key="rented-city-ebike">租赁城市电动车</div>
+                                    <div class="activity-time">2023-06-15 09:32</div>
+                                </div>
+                                <div class="activity-amount">-¥549.00</div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-icon">
+                                    <i class="fas fa-wallet"></i>
+                                </div>
+                                <div class="activity-details">
+                                    <div class="activity-title" data-lang-key="account-recharge">充值账户</div>
+                                    <div class="activity-time">2023-06-10 14:18</div>
+                                </div>
+                                <div class="activity-amount credit">+¥500.00</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tab Bar -->
+                    <div class="tab-bar">
+                        <div class="tab-item">
+                            <div class="tab-icon"><i class="fas fa-home"></i></div>
+                            <div class="tab-label" data-lang-key="home">首页</div>
+                        </div>
+                        <div class="tab-item">
+                            <div class="tab-icon"><i class="fas fa-compass"></i></div>
+                            <div class="tab-label" data-lang-key="discover">发现</div>
+                        </div>
+                        <div class="tab-item">
+                            <div class="tab-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="tab-label" data-lang-key="nearby">附近</div>
+                        </div>
+                        <div class="tab-item">
+                            <div class="tab-icon"><i class="fas fa-shopping-cart"></i></div>
+                            <div class="tab-label" data-lang-key="shopping-cart">购物车</div>
+                        </div>
+                        <div class="tab-item active">
+                            <div class="tab-icon"><i class="fas fa-user"></i></div>
+                            <div class="tab-label" data-lang-key="my">我的</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cart/Checkout Screen -->
+        <section class="screen-container" id="cart-screen">
+            <div class="screen-header">
+                <h2 data-lang-key="cart-checkout">购物车/结账</h2>
+            </div>
+            <div class="ios-screen">
+                <div class="status-bar">
+                    <span>9:41</span>
+                    <div>
+                        <span class="mr-2"><i class="fas fa-signal"></i></span>
+                        <span class="mr-2"><i class="fas fa-wifi"></i></span>
+                        <span><i class="fas fa-battery-full"></i></span>
+                    </div>
+                </div>
+                
+                <div class="cart-container">
+                    <!-- Navigation Bar -->
+                    <div class="nav-bar">
+                        <div class="nav-title" data-lang-key="shopping-cart">购物车</div>
+                        <div class="nav-buttons">
+                            <button class="icon-btn">
+                                <i class="fas fa-trash-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Cart Items -->
+                    <div class="cart-items">
+                        <div class="cart-item">
+                            <div class="item-select">
+                                <input type="checkbox" id="item1" checked>
+                                <label for="item1"></label>
+                            </div>
+                            <div class="item-image">
+                                <i class="fas fa-bicycle"></i>
+                            </div>
+                            <div class="item-details">
+                                <div class="item-name" data-lang-key="city-ebike">城市轻便电动车 X1 Pro</div>
+                                <div class="item-option" data-lang-key="weekly-rental-days">周租 · 7天</div>
+                                <div class="item-price-qty">
+                                    <div class="item-price" data-lang-key="ebike-weekly-price">¥549.00</div>
+                                    <div class="item-qty">
+                                        <button class="qty-btn">
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+                                        <span class="qty-value">1</span>
+                                        <button class="qty-btn">
+                                            <i class="fas fa-plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="cart-item">
+                            <div class="item-select">
+                                <input type="checkbox" id="item2" checked>
+                                <label for="item2"></label>
+                            </div>
+                            <div class="item-image">
+                                <i class="fas fa-helmet-safety"></i>
+                            </div>
+                            <div class="item-details">
+                                <div class="item-name" data-lang-key="safety-helmet">安全头盔</div>
+                                <div class="item-option" data-lang-key="weekly-rental-days">周租 · 7天</div>
+                                <div class="item-price-qty">
+                                    <div class="item-price" data-lang-key="helmet-weekly-price">¥35.00</div>
+                                    <div class="item-qty">
+                                        <button class="qty-btn">
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+                                        <span class="qty-value">1</span>
+                                        <button class="qty-btn">
+                                            <i class="fas fa-plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Recommendations -->
+                    <div class="cart-section">
+                        <div class="section-header">
+                            <h3 class="section-title" data-lang-key="recommended-accessories">推荐配件</h3>
+                            <a href="#" class="section-link" data-lang-key="more">更多 <i class="fas fa-chevron-right"></i></a>
+                        </div>
+                        
+                        <div class="recommendations">
+                            <div class="recommendation-item">
+                                <div class="recommendation-image">
+                                    <i class="fas fa-lock"></i>
+                                </div>
+                                <div class="recommendation-name" data-lang-key="anti-theft-lock">防盗锁</div>
+                                <div class="recommendation-price" data-lang-key="lock-price">¥15/周</div>
+                                <button class="btn-sm btn-outline-primary" data-lang-key="add">加入</button>
+                            </div>
+                            
+                            <div class="recommendation-item">
+                                <div class="recommendation-image">
+                                    <i class="fas fa-lightbulb"></i>
+                                </div>
+                                <div class="recommendation-name" data-lang-key="front-light">车前灯</div>
+                                <div class="recommendation-price" data-lang-key="light-price">¥10/周</div>
+                                <button class="btn-sm btn-outline-primary" data-lang-key="add">加入</button>
+                            </div>
+                            
+                            <div class="recommendation-item">
+                                <div class="recommendation-image">
+                                    <i class="fas fa-umbrella"></i>
+                                </div>
+                                <div class="recommendation-name" data-lang-key="bike-shed">车棚</div>
+                                <div class="recommendation-price" data-lang-key="shed-price">¥20/周</div>
+                                <button class="btn-sm btn-outline-primary" data-lang-key="add">加入</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Coupon Section -->
+                    <div class="coupon-section">
+                        <div class="coupon-input">
+                            <input type="text" data-lang-key="coupon-code-placeholder" placeholder="输入优惠码">
+                            <button class="coupon-btn" data-lang-key="apply">应用</button>
+                        </div>
+                        <div class="coupon-list">
+                            <div class="coupon-item active">
+                                <div class="coupon-info">
+                                    <div class="coupon-value">¥50</div>
+                                    <div class="coupon-condition" data-lang-key="coupon-condition">满¥500可用</div>
+                                    <div class="coupon-date" data-lang-key="valid-until">有效期至：2023-07-31</div>
+                                </div>
+                                <div class="coupon-action">
+                                    <span class="coupon-status" data-lang-key="selected">已选择</span>
+                                </div>
+                            </div>
+                            
+                            <div class="coupon-item">
+                                <div class="coupon-info">
+                                    <div class="coupon-value">¥20</div>
+                                    <div class="coupon-condition" data-lang-key="no-minimum">无门槛</div>
+                                    <div class="coupon-date" data-lang-key="valid-until">有效期至：2023-08-15</div>
+                                </div>
+                                <div class="coupon-action">
+                                    <button class="coupon-select-btn" data-lang-key="select">选择</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tab Bar -->
+                    <div class="tab-bar">
+                        <div class="tab-item">
+                            <div class="tab-icon"><i class="fas fa-home"></i></div>
+                            <div class="tab-label" data-lang-key="home">首页</div>
+                        </div>
+                        <div class="tab-item">
+                            <div class="tab-icon"><i class="fas fa-compass"></i></div>
+                            <div class="tab-label" data-lang-key="discover">发现</div>
+                        </div>
+                        <div class="tab-item">
+                            <div class="tab-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="tab-label" data-lang-key="nearby">附近</div>
+                        </div>
+                        <div class="tab-item">
+                            <div class="tab-icon"><i class="fas fa-shopping-cart"></i></div>
+                            <div class="tab-label" data-lang-key="shopping-cart">购物车</div>
+                        </div>
+                        <div class="tab-item active">
+                            <div class="tab-icon"><i class="fas fa-user"></i></div>
+                            <div class="tab-label" data-lang-key="my">我的</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p data-lang-key="footer-text">电动自行车租赁 App Prototype &copy; 2023</p>
+    </footer>
+
+    <!-- 添加语言切换脚本 -->
+    <script src="language.js"></script>
+</body>
+</html> 
